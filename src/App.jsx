@@ -1,13 +1,12 @@
-// ブランチ練習中
-import Message from './Message';
-import UserInfo from './UserInfo';
+import Message from './components/Message';
 
 function App() {
   return (
-    <div>
-      <Message text="こんにちは！Reactのpropsの練習中です！" />
-      <UserInfo name="純" age={29} />
-    </div>
+    <>
+      <h1>React Props Lesson</h1>
+      <Message text="ReactのProps復習中です" />
+      <Message text="コンポーネントに値を渡す方法を練習しています。" />
+    </>
   );
 }
 
