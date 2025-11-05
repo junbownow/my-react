@@ -1,3 +1,4 @@
+// ブランチ練習中
 import Message from './Message';
 import UserInfo from './UserInfo';
 
@@ -10,4 +11,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
