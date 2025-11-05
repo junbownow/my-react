@@ -1,11 +1,9 @@
-function UserInfo({ name, age }) {
+export default function UserInfo({ user }) {
   return (
     <div>
-      <h2>ユーザー情報</h2>
-      <p>名前：{name}</p>
-      <p>年齢：{age}歳</p>
+      <p>名前：{user.name}</p>
+      <p>年齢：{user.age}歳</p>
+      <p>趣味：{user.hobby}</p>
     </div>
   );
 }
-
-export default UserInfo;

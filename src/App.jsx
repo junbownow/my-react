@@ -1,13 +1,17 @@
-import Message from './components/Message';
+import './App.css';
+import UserCard from './components/UserCard';
 
-function App() {
+export default function App() {
+  const user = {
+    name: '純',
+    age: 32,
+    hobby: 'コーヒー',
+  };
+
   return (
-    <>
-      <h1>React Props Lesson</h1>
-      <Message text="ReactのProps復習中です" />
-      <Message text="コンポーネントに値を渡す方法を練習しています。" />
-    </>
+    <div>
+      <h1>ユーザー情報</h1>
+      <UserCard user={user} />
+    </div>
   );
 }
-
-export default App;
