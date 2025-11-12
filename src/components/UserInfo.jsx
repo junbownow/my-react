@@ -1,9 +1,11 @@
-export default function UserInfo({ user }) {
+// 分割代入を使って、propsオブジェクトからuserNameとisLoggedInを直接取り出す。
+const UserInfo = ({ username, isLoggedIn }) => {
+  // 変数名userNameとisloggedInが使用できるようになった。
   return (
     <div>
-      <p>名前：{user.name}</p>
-      <p>年齢：{user.age}歳</p>
-      <p>趣味：{user.hobby}</p>
+      {isLoggedIn ? <p>ようこそ、{username}さん！ログイン中です。</p> : <p>ゲスト様、ログインしてください。</p>}
     </div>
   );
-}
+};
+
+export default UserInfo;
