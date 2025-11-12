@@ -1,28 +1,36 @@
-// 1. Reactから useState Hook をインポートします
 import { useState } from 'react';
 
 const Counter = () => {
-  // 2. Stateの定義（重要！）
-  // [現在の値, 値を更新するための関数] = useState(初期値)
   const [count, setCount] = useState(0);
 
-  // 3. 値を増やすための関数（イベントハンドラ）
+  // カウントアップのイベントハンドラ
   const handleClick = () => {
-    // 4. setCount() を使って State の値を更新します
-    // これを行うと、Reactはこのコンポーネントを再レンダリング（再描画）します
     setCount(count + 1);
   };
+  
+  // TODO: 1. リセット用のイベントハンドラ (handleReset) を作成する
+
+  // TODO: 2. setCount を使って count を 0 に戻す処理を書く
+  const handleReset = () => {
+    // ここに処理を記述
+    setCount(0);
+  };
+
 
   return (
     <div>
       <h2>カウントアプリ</h2>
-      {/* 5. Stateの現在の値を表示します */}
       <p>現在のカウント: **{count}**</p>
       
-      {/* 6. ボタンの onClick イベントに handleClick 関数を割り当てます */}
       <button onClick={handleClick}>
         カウントアップ
       </button>
+      
+      {/* TODO: 3. リセットボタンを追加し、handleReset 関数を割り当てる */}
+      <button onClick={handleReset}>
+        カウントリセット
+      </button>
+      
     </div>
   );
 };

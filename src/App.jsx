@@ -1,17 +1,17 @@
-import './App.css';
-// 1. カウンターコンポーネントをインポート
-import Counter from './components/Counter'; 
+import { useState } from 'react';
+import DisplayColor from './components/DisplayColor';
 
 function App() {
+  const [appColor, setAppColor] = useState('blue');
+
+  const toggleColor = () => {
+    setAppColor(appColor === 'blue' ? 'red' : 'blue');
+  };
+
   return (
     <>
-      <h1>React State 学習</h1>
-      
-      {/* 2. カウンターを配置 */}
-      <Counter />
-      
-      {/* おさらい: PropsだけのコンポーネントとStateを持ったコンポーネントを同時に使えます */}
-      {/* <UserInfo username="テスト" isLoggedIn={true} /> */}
+      <h1>背景色切り替え</h1>
+      <DisplayColor backgroundColor={appColor} changeColor={toggleColor} />
     </>
   );
 }
