@@ -1,0 +1,19 @@
+button {
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+:is(.count-up, .count-down) {
+  width: calc(50% - 5px);
+}
+
+.count-down {
+  margin-left: 10px;
+}
+
+.reset {
+  background: red;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+}

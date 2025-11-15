@@ -1,12 +1,13 @@
-import Counter from './components/Counter';
+import './App.css';
+import Counter from './components/Counter/Counter';
 
-function App() {
+const App = () => {
   return (
     <>
       <h1>カウントアップ</h1>
       <Counter />
     </>
   );
-}
+};
 
 export default App;
