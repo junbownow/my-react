@@ -1,0 +1,14 @@
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
+
+.reset {
+  grid-column: span 2;
+  background-color: hsl(10, 100%, 45%);
+  transition: background-color .5s ease;
+  &:hover {
+    background-color: hsl(10, 100%, 30%);
+  }
+}
