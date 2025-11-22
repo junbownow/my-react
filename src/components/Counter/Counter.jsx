@@ -16,9 +16,9 @@ const Counter = ({ title, color, startValue }) => {
 
   return (
     // 受け取ったcolorをインラインスタイルで枠線の色に使用
-    <div className="counter-container" style={{ borderColor: color }}>
+    <div className="counter-container" style={{ '--theme-color': color }}>
       {/* 受け取ったtitleを表示 */}
-      <h2 style={{ color: color }}>{title}</h2>
+      <h2 style={{ '--theme-color': color }}>{title}</h2>
 
       <p>現在のカウント：**{count}**</p>
       <div className="button-container">

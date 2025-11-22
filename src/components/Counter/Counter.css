@@ -1,8 +1,16 @@
+:root {
+  --theme-color: green;
+}
+
 .counter-container {
-  border: 1px solid;
+  border: 1px solid var(--theme-color);
   border-radius: 5px;
   padding: 20px;
   margin-top: 20px;
+}
+
+h2 {
+  color: var(--theme-color);
 }
 
 .button-container {
