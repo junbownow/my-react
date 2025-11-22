@@ -1,0 +1,29 @@
+:root {
+  --theme-color: green;
+}
+
+.counter-container {
+  border: 1px solid var(--theme-color);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+h2 {
+  color: var(--theme-color);
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.reset {
+  grid-column: span 2;
+  background-color: hsl(10, 100%, 45%);
+  transition: background-color 0.5s ease;
+  &:hover {
+    background-color: hsl(10, 100%, 30%);
+  }
+}
