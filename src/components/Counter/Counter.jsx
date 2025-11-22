@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import './Counter.css';
 
-const Counter = ({ title, color, startValue }) => {
+// 1. PropsにonResetを追加して受け取る
+const Counter = ({ title, color, startValue, onReset }) => {
   const [count, setCount] = useState(startValue);
 
-  const handleClickUp = () => {
-    setCount(count + 1);
-  };
-  const handleClickDown = () => {
-    setCount(count - 1);
-  };
+  const handleClickUp = () => setCount(count + 1);
+  const handleClickDown = () => setCount(count - 1);
+
   const handleClickReset = () => {
+    // 2. まず自分のStateをリセットする
     setCount(startValue);
+
+    // 3. 親から預かっていた「防犯ブザー」を押す（関数を実行する）
+    // 引数として自分の名前(title)を親に渡してあげる
+    onReset(title);
   };
 
   return (
@@ -28,6 +31,7 @@ const Counter = ({ title, color, startValue }) => {
         <button onClick={handleClickDown} className="count-down">
           減らす
         </button>
+        {/* ボタンが押されたらhandleClickResetが動く */}
         <button onClick={handleClickReset} className="reset">
           リセット
         </button>
